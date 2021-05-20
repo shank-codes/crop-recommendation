@@ -47,34 +47,34 @@
         {% endif %}
         -->
         <p class="h1">Enter Details of the land and weather</p>
-        <form class="row g-3" method="POST" action="" >
+        <form class="row g-3" method="POST" action="result" >
             <div class="col-md-6">
             <label for="nitrogen" class="form-label">Nitrogen</label>
             <input type="number" class="form-control" name="nitrogen" id="nitrogen" min="0"  placeholder="Ratio of Nitrogen content in soil" required>
             </div>
             <div class="col-md-6">
             <label for="Phosphorous" class="form-label">Phosphorous</label>
-            <input type="number" class="form-control" name="Phosphorous" id="Phosphorous" min="0" placeholder="Ratio of Phosphorous content in soil" required>
+            <input type="number" class="form-control" name="phosphorous" id="Phosphorous" min="0" placeholder="Ratio of Phosphorous content in soil" required>
             </div>
             <div class="col-md-6">
-            <label for="pottasium" class="form-label">Pottasium</label>
-            <input type="number" class="form-control" name="pottasium" id="pottasium" min="0"  placeholder="Ratio of Potassium content in soil" required>
+            <label for="potassium" class="form-label">Potassium</label>
+            <input type="number" class="form-control" name="potassium" id="potassium" min="0"  placeholder="Ratio of Potassium content in soil" required>
             </div>
             <div class="col-md-6">
             <label for="temperature" class="form-label">Temperature</label>
-            <input type="number" class="form-control" name="temperature" id="temperature" step="0.01" placeholder=" Temperature in degree Celsius" required>
+            <input type="number" class="form-control" name="temperature" id="temperature" step="0.00001" placeholder=" Temperature in degree Celsius" required>
             </div>
             <div class="col-md-6">
             <label for="humidity" class="form-label">Humidity</label>
-            <input type="number" class="form-control" name="humidity" id="humidity" min="0.00" max="100.00" step="0.01" placeholder="Relative humidity in %" required>
+            <input type="number" class="form-control" name="humidity" id="humidity" min="0.00" max="100.00" step="0.00001" placeholder="Relative humidity in %" required>
             </div>
             <div class="col-md-6">
             <label for="ph" class="form-label">Potential of hydrogen(ph)</label>
-            <input type="number" class="form-control" name="ph" id="ph" step="0.01" placeholder=" ph value of the soil" required>
+            <input type="number" class="form-control" name="ph" id="ph" step="0.00001" placeholder=" ph value of the soil" required>
             </div>
             <div class="col-md-6">
             <label for="rainfall" class="form-label">Rainfall</label>
-            <input type="number" class="form-control" name="rainfall" id="rainfall" step="0.01" placeholder="rainfall in mm" required>
+            <input type="number" class="form-control" name="rainfall" id="rainfall" step="0.00001" placeholder="rainfall in mm" required>
             </div>
 
             <button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>

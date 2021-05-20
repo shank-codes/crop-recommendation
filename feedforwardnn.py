@@ -2,6 +2,7 @@ from random import seed
 from random import random
 from math import exp
 
+
 # Initialize a network
 # each node is implemented using dictionary
 # each layer is a list of nodes, and network is a list of layers
