@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <title>Crop Recommendation</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Crop Recommendation</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+    <div class="container mt-3">
+
+        <!--
+        {% if range != 'Z' %}
+          {% if range==0 %}
+              {% set rangeTxt = "Your phone belongs to low range price category" %}
+          {% elif range ==1 %} 
+              {% set rangeTxt = "Your phone belongs to mid range price category" %}
+          {% elif range ==2 %} 
+              {% set rangeTxt = "Your phone belongs to high range price category" %}
+          {% else %}
+              {% set rangeTxt = "Your phone belongs to very high range price category" %}
+          {% endif %}
+          <span class="badge bg-info text-dark">{{rangeTxt}}</span>
+        {% endif %}
+        -->
+        <p class="h1">Enter Details of the land and weather</p>
+        <form class="row g-3" method="POST" action="" >
+            <div class="col-md-6">
+            <label for="nitrogen" class="form-label">Nitrogen</label>
+            <input type="number" class="form-control" name="nitrogen" id="nitrogen" min="0"  placeholder="Ratio of Nitrogen content in soil" required>
+            </div>
+            <div class="col-md-6">
+            <label for="Phosphorous" class="form-label">Phosphorous</label>
+            <input type="number" class="form-control" name="Phosphorous" id="Phosphorous" min="0" placeholder="Ratio of Phosphorous content in soil" required>
+            </div>
+            <div class="col-md-6">
+            <label for="pottasium" class="form-label">Pottasium</label>
+            <input type="number" class="form-control" name="pottasium" id="pottasium" min="0"  placeholder="Ratio of Potassium content in soil" required>
+            </div>
+            <div class="col-md-6">
+            <label for="temperature" class="form-label">Temperature</label>
+            <input type="number" class="form-control" name="temperature" id="temperature" step="0.01" placeholder=" Temperature in degree Celsius" required>
+            </div>
+            <div class="col-md-6">
+            <label for="humidity" class="form-label">Humidity</label>
+            <input type="number" class="form-control" name="humidity" id="humidity" min="0.00" max="100.00" step="0.01" placeholder="Relative humidity in %" required>
+            </div>
+            <div class="col-md-6">
+            <label for="ph" class="form-label">Potential of hydrogen(ph)</label>
+            <input type="number" class="form-control" name="ph" id="ph" step="0.01" placeholder=" ph value of the soil" required>
+            </div>
+            <div class="col-md-6">
+            <label for="rainfall" class="form-label">Rainfall</label>
+            <input type="number" class="form-control" name="rainfall" id="rainfall" step="0.01" placeholder="rainfall in mm" required>
+            </div>
+
+            <button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
+            
+        </form>
+      </div>
+  </body>
+</html>
