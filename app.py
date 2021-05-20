@@ -29,7 +29,7 @@ def recommend():
     humidity = float(request.form['humidity'])
     ph = float(request.form['ph'])
     rainfall = float(request.form['rainfall'])
-    return (n,p,k,temp,humidity,ph,rainfall)
+    return str(n)
 
 
 if __name__ == '__main__':
