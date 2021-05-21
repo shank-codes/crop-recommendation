@@ -31,7 +31,6 @@
     </div>
     </nav>
     <div class="container mt-3">
-
         <!--
         {% if range != 'Z' %}
           {% if range==0 %}
@@ -47,7 +46,7 @@
         {% endif %}
         -->
         <p class="h1">Enter Details of the land and weather</p>
-        <form class="row g-3" method="POST" action="result" >
+        <form class="row g-3" method="POST" action="predict" >
             <div class="col-md-6">
             <label for="nitrogen" class="form-label">Nitrogen</label>
             <input type="number" class="form-control" name="nitrogen" id="nitrogen" min="0"  placeholder="Ratio of Nitrogen content in soil" required>
