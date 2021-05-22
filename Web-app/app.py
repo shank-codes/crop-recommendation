@@ -23,16 +23,18 @@ def hello_world():
 
 @app.route('/predict',methods=["POST"])
 def recommend():
-    n = int(request.form['nitrogen'])
-    p = int(request.form['phosphorous'])
-    k = int(request.form['potassium'])
-    temp = float(request.form['temperature'])
-    humidity = float(request.form['humidity'])
-    ph = float(request.form['ph'])
-    rainfall = float(request.form['rainfall'])
+    input = request.json
+    print(input)
+    n = int(input['nitrogen'])
+    p = int(input['phosphorous'])
+    k = int(input['potassium'])
+    temp = float(input['temperature'])
+    humidity = float(input['humidity'])
+    ph = float(input['ph'])
+    rainfall = float(input['rainfall'])
     row = [n,p,k,temp,humidity,ph,rainfall]
     result = crop_predict(row)
-    return jsonify({"result":result,"status":200})
+    return jsonify({"result": result,"status":200})
 
 
 if __name__ == '__main__':
