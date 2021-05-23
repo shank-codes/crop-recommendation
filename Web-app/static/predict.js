@@ -18,7 +18,7 @@ function predict() {
         console.log(json)
         if(json["status"] === 200) {
             let head = document.getElementById("head");
-            head.innerHTML = "Grow " + json["result"] + "!!<br>But before that, grow some balls<br>";
+            head.innerHTML = "Grow " + json["result"];
         }
     });
 }
